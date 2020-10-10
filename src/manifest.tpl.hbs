@@ -1,0 +1,21 @@
+{
+  "manifest_version": 2,
+  "name": "Daily Sentense",
+  "description": "A Philosophy of the Day",
+  "version": "1.0.0",
+  "icons": {
+    "16": "images/en16x16.png",
+    "48": "images/en48x48.png",
+    "128": "images/en128x128.png"
+  },
+  {{#if debug}}
+  "background": {
+    "scripts": ["reload.js"]
+  },
+  {{/if}}
+  "chrome_url_overrides": {
+    "newtab": "overrides.html"
+  },
+  "content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self'",
+  "permissions": ["https://cn.bing.com/", "http://sentence.iciba.com/", "http://www.weather.com.cn/"]
+}
